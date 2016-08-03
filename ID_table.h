@@ -7,10 +7,10 @@ typedef struct ID_table_entry{
 } ID_table_entry;
 
 class ID_table{
-	std::list<ID_table_entry> table;
+	std::list<ID_table_entry> table;	
 	
-	ID_table();
+	ID_table();	
 	
-	int generate_ID(int t_ID);
-	void remove_ID(int a_ID);
+	int generate_ID(int t_ID);//generate a unique ID, t_ID is for creating a complete ID_table_entry.
+	void remove_ID(int a_ID);//remove a ID record from the master table.
 };
