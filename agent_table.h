@@ -12,9 +12,8 @@ class agent_table{
 		int T_ID;//table ID
 		string agent_type;//what agent this table hold
 		std::list<attribute> agent_attribute;//define columns
-	public:
 		std::list<agent_table_entry> table;//set of agents(set of rows)
-		
+	public:
 		agent_table(string type, agent_attribute);
 		//utility functions
 		int get_ID(){
@@ -32,6 +31,10 @@ class agent_table{
 		void set_type(string type){
 			agent_type = type;
 		}
-		//	
+		
+		void add_entry(agent_table_entry n_entry);		
+		void delete_entry(int index);
+		void sort_table(attribute sort_target, bool increase);
+
 } agent_table;
 //agent table, different agent have different table.
