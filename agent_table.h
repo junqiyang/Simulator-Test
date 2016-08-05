@@ -14,27 +14,21 @@ class agent_table{
 		std::list<attribute> agent_attribute;//define columns
 		std::list<agent_table_entry> table;//set of agents(set of rows)
 	public:
-		agent_table(string type, agent_attribute);
-		//utility functions
-		int get_ID(){
-			return T_ID;
-		}
+		//constructor
+		agent_table(string type,list<attribute> attri);
 		
-		void set_ID(int ID){
-			T_ID = ID;
-		}
-	
-		string get_type(){
-			return agent_type;
-		}
+		//set	
+		void set_ID(int ID){T_ID = ID;}
+		void set_type(string type){agent_type = type;}
+		void set_attribute(list<attribute> attri){agent_attribute = attri;}
+		//get
+		int get_ID(){return T_ID;}	
+		string get_type(){return agent_type;}
+		list<attribute> get_attribute(){return agent_attribute;}
 		
-		void set_type(string type){
-			agent_type = type;
-		}
-		
+		//member functions
 		void add_entry(agent_table_entry n_entry);		
-		void delete_entry(int index);
-		void sort_table(attribute sort_target, bool increase);
-
+		void delete_entry(int index);//delete by A_ID
+		//void sort_table(attribute sort_target, bool increase);
 } agent_table;
 //agent table, different agent have different table.

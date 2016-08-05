@@ -31,16 +31,20 @@ void agent_manager::delete_agent_type(string type_name){
 }
 
 void agent_manger::create_agent(string a_type,std::list<data> n_entry){
+	int tp_ID;
+	agent_table* tp_table = new agent_table;
 	for(int i=0; i<table_list.size();i++){
 		if(table_list[i].agent_type == type_name){
 			tp_ID = table_list[i].T_ID;
+			tp_table = table_list[i];
 			break;
 		}
 	}
 	int a_ID = generate_ID(tp_ID);
 	agent_table_entry new_entry = new agent_table_entry;
 	new_entry.A_ID = a_ID;
-	new_entry.entry = n_entry;				
+	new_entry.entry = n_entry;		
+	tp_table->add_entry(new_entry);
 }
 
 

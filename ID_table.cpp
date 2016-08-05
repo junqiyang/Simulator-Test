@@ -23,10 +23,18 @@ int ID_table::generate_ID(int t_ID){
 	return new_entry.A_ID;		
 }
 	
-void remove_ID(int a_ID){
+void ID_table::remove_ID(int a_ID){
 	if(a_ID > table.size()){
 		cout<<"no such ID";
 		return;
 	}
 	table[a_ID] = NULL;	
+}
+
+void ID_table::remove_table(int t_ID){
+	for(int i = 0; i<table.size();i++){
+		if(table[i].T_ID == t_ID){
+			table[i] = NULL;
+		}
+	}	
 }

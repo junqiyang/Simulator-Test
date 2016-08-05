@@ -15,8 +15,7 @@ class agent_manager{
 	
 	agent_table_entry get_agent(int A_ID);
 	/* there are some database like functions below*/
-	void search_by_ID();//search by agent ID
-	void search_by_attribute(int T_ID, attribute target);//search by attribute in a specific table
+	void search_for_table(int T_ID);
 	
 	void sort_by_attribute(int T_ID, attribute target, bool rule);//sort the function
 	//keep simple for now, we will need more DB functions in the future.
