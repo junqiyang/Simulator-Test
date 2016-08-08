@@ -21,7 +21,7 @@ void agent_manager::delete_agent_type(string type_name) {
 	//first we let the table_list entry pointer to nothing
 	for (int i = 0; i<table_list.size(); i++) {
 		if (table_list[i]->get_type() == type_name) {
-			tp_ID = table_list[i]->get_ID;
+			tp_ID = table_list[i]->get_ID();
 			table_list[i] = NULL;
 		}
 	}
@@ -36,7 +36,7 @@ void agent_manager::delete_agent_type(string type_name) {
 
 agent_table* agent_manager::search_table_type(string a_type) {
 	for (int i = 0; i<table_list.size(); i++) {
-		if (table_list[i]->get_type == a_type) {
+		if (table_list[i]->get_type() == a_type) {
 			return table_list[i];
 		}
 	}
@@ -44,7 +44,7 @@ agent_table* agent_manager::search_table_type(string a_type) {
 
 agent_table* agent_manager::search_table_ID(int t_id) {
 	for (int i = 0; i<table_list.size(); i++) {
-		if (table_list[i]->get_ID == t_id) {
+		if (table_list[i]->get_ID() == t_id) {
 			return table_list[i];
 		}
 	}
@@ -63,9 +63,9 @@ agent* agent_manager::search_agent_ID(int a_ID) {
 	return tp_Table->search_agent(a_ID);
 }
 
-void agent_manager::create_agent(string a_type, vector<info> n_entry) {
+void agent_manager::create_agent(string a_type, vector<string> n_entry) {
 	agent_table *tp_Table = search_table_type(a_type);
-	int tp_ID = tp_Table->get_ID;
+	int tp_ID = tp_Table->get_ID();
 	int a_ID = master_table.generate_ID(tp_ID);
 	agent n_agent;
 	n_agent.A_ID = a_ID;
@@ -76,4 +76,15 @@ void agent_manager::create_agent(string a_type, vector<info> n_entry) {
 void agent_manager::delete_agent(int ID) {
 	agent * target = search_agent_ID(ID);
 	target = NULL;
+}
+
+
+void agent_manager::print_table_id(int t_id) {
+	agent_table* target = search_table_ID(t_id);
+	target->print_table();
+}
+
+void agent_manager::print_table_type(string t_tp) {
+	agent_table* target = search_table_type(t_tp);
+	target->print_table();
 }

@@ -1,5 +1,5 @@
 #pragma once
-#include "dispatcher.h"
+#include "behavior.h"
 
 class behavior_manager {
 	int ID;
@@ -8,7 +8,9 @@ public:
 	behavior_manager();
 	behavior_manager(int id);
 	
-	vector<behavior> create_start_list(int Timer);
-	
+	void add_behavior(behavior n_behav);
 
+	vector<behavior> create_start_list(int Timer);
+
+	
 };

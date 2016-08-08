@@ -3,8 +3,7 @@
 ID_table::ID_table(){}
 
 int ID_table::generate_ID(int t_ID) {
-	ID_table_entry* new_entry;
-	new_entry->T_ID = t_ID;
+	ID_table_entry* new_entry = new ID_table_entry(t_ID);
 	if (table.empty()) {
 		new_entry->A_ID = 0;
 		table.push_back(new_entry);

@@ -54,9 +54,6 @@
     <ClInclude Include="job.h">
       <Filter>Header Files\job</Filter>
     </ClInclude>
-    <ClInclude Include="simulation_manager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="update_manager.h">
       <Filter>Header Files\update</Filter>
     </ClInclude>
@@ -72,6 +69,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="agent_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="behavior_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

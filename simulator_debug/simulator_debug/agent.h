@@ -4,27 +4,32 @@
 
 #include<iostream>
 #include <string>
-
+#include <vector>
+using namespace std;
 //define data format
 
-typedef std::string info;
 
-typedef struct agent{
+
+struct agent{
 	int A_ID;
-	vector<info> entry;
-} agent;
+	vector<std::string> entry;
+};
 //indiviual agent information set(row of each table)
 
-bool compare_int(info &d1, info &d2) {
+/*bool compare_int(std::string &d1, std::string &d2) {
 	return (atoi(d1.c_str())>atoi(d2.c_str()));
 }
 
-bool compare_string(info &d1, info &d2) {
+bool compare_string(std::string &d1, std::string &d2) {
 	return 	d1>d2;
 }
-
-typedef struct attribute {
+*/
+struct attribute {
 	int type;//1 for int, 2 for string, 3 for bool
 	std::string attribute_name;
-} attribute;
+	attribute(std::string name, int tp) {
+		attribute_name = name;
+		type = tp;
+	};
+};
 #endif

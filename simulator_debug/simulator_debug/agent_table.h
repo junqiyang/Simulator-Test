@@ -16,7 +16,7 @@ private:
 public:
 	//constructor
 	agent_table();
-	agent_table(string type, vector<attribute> attri);
+	agent_table(std::string type, vector<attribute> attri);
 
 	//set	
 	void set_ID(int ID) { T_ID = ID; }
@@ -31,7 +31,9 @@ public:
 	agent* search_agent(int a_id);
 	void add_agent(agent n_agent);
 	void delete_entry(int index);//delete by A_ID
-								 //void sort_table(attribute sort_target, bool increase);
+
+	//only for testing purpose
+	void print_table();
 };
 //agent table, different agent have different table.
 #endif
