@@ -57,6 +57,9 @@
     <ClInclude Include="Worker.h">
       <Filter>Header Files\Thread</Filter>
     </ClInclude>
+    <ClInclude Include="simulation_master.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="agent_table.cpp">
