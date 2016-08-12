@@ -16,5 +16,5 @@ class thread_factory {
 	thread_factory();
 	thread_factory(int num);
 
-	void dispatch_job(vector<job> job_queue) 
+	void dispatch_job(vector<job> job_queue);
 };

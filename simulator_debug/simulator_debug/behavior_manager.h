@@ -10,5 +10,6 @@ public:
 	behavior_manager(int id);
 	
 	void add_behavior(behavior n_behav);
-	vector<behavior> create_job_list(int Timer);	
+	vector<behavior> create_active_list(int Timer);
+	vector<job> create_job_list(int Timer);
 };

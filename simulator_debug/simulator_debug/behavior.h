@@ -6,7 +6,7 @@ using namespace std;
 
 struct behavior {
 	int start_time;
-	vector<agent>  (*filter_function)();
+	vector<agent*>  (*filter_function)();
 	void (*logic_function)();
 };
 
