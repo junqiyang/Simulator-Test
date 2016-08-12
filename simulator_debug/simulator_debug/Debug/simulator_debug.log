@@ -1,3 +1,4 @@
 ﻿  test_main.cpp
+c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\test_main.cpp(29): warning C4018: '<': signed/unsigned mismatch
   simulator_debug.vcxproj -> C:\Users\roast_000\Documents\GitHub\SimulatorEngine\simulator_debug\Debug\simulator_debug.exe
   simulator_debug.vcxproj -> C:\Users\roast_000\Documents\GitHub\SimulatorEngine\simulator_debug\Debug\simulator_debug.pdb (Partial PDB)

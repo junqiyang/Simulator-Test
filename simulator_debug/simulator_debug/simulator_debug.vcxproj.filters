@@ -19,14 +19,14 @@
     <Filter Include="Header Files\behavior">
       <UniqueIdentifier>{af95485e-606e-46fe-9730-120a5480e80e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\job">
-      <UniqueIdentifier>{6eb948e3-5812-4548-a17f-28297771fe22}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Input">
       <UniqueIdentifier>{14788aae-afa1-4b06-9edc-ecf672f8fcf1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\update">
       <UniqueIdentifier>{a5a2f14f-9e2a-4a98-824e-2cd07ced40d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Thread">
+      <UniqueIdentifier>{0dcce612-eeb4-47a1-9cf1-9506a377e3df}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,17 +48,14 @@
     <ClInclude Include="behavior_manager.h">
       <Filter>Header Files\behavior</Filter>
     </ClInclude>
-    <ClInclude Include="job_manager.h">
-      <Filter>Header Files\job</Filter>
-    </ClInclude>
-    <ClInclude Include="job.h">
-      <Filter>Header Files\job</Filter>
-    </ClInclude>
     <ClInclude Include="update_manager.h">
       <Filter>Header Files\update</Filter>
     </ClInclude>
     <ClInclude Include="input_manager.h">
       <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>Header Files\Thread</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +72,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="work.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
