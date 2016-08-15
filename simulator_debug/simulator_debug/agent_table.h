@@ -12,8 +12,9 @@ private:
 	int T_ID;//table ID
 	string agent_type;//what agent this table hold
 	vector<attribute> agent_attribute;//define columns
-	vector<agent> table;//set of agents(set of rows)
+	
 public:
+	vector<agent> table;//set of agents(set of rows)
 	//constructor
 	agent_table();
 	agent_table(std::string type, vector<attribute> attri);

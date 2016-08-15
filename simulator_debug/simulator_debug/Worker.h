@@ -10,10 +10,11 @@ using namespace std;
 using namespace boost::threadpool;
 
 class thread_factory {
+public:
 	prio_pool factory;
 	vector<job> job_queue;
 
-	thread_factory();
+	thread_factory() ;
 	thread_factory(int num);
 
 	void dispatch_job(vector<job> job_queue);

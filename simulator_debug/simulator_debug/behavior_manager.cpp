@@ -22,18 +22,17 @@ vector<behavior> behavior_manager::create_active_list(int Timer) {
 		}
 		return active_list;
 	}
-	else return;
 }
 
-vector<job> behavior_manager::create_job_list(int Timer) {
+vector<job> behavior_manager::create_job_list(int Timer, agent_manager *target) {
 	vector<behavior> act_list = create_active_list(Timer);
 	vector<job> result;
 	vector<agent*> tp_agents;
 	for (int i = 0; i < act_list.size(); i++) {
-		tp_agents = (act_list[i].filter_function());
+		tp_agents = (act_list[i].filter_function(target));//correct
 		for (int j = 0; j < tp_agents.size(); j++) {
 			job n_job;
-			n_job.target = tp_agents[i];
+			n_job.target = tp_agents[j];
 			n_job.action = act_list[i].logic_function;
 			result.push_back(n_job);
 		}
@@ -41,3 +40,13 @@ vector<job> behavior_manager::create_job_list(int Timer) {
 	return result;
 }
 
+/*
+vector<agent*> behavior_manager::create_job_list(int Timer, agent_manager *target) {
+	vector<behavior> act_list = create_active_list(Timer);
+	vector<job> result;
+	vector<agent*> tp_agents;
+	for (int i = 0; i < act_list.size(); i++) {
+		tp_agents = (act_list[i].filter_function(target));
+	}
+	return tp_agents;
+}*/

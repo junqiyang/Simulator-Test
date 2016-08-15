@@ -31,5 +31,15 @@ struct attribute {
 		attribute_name = name;
 		type = tp;
 	};
+
+	bool operator==(const string &other) {
+		if (attribute_name.compare(other) != 0) {
+			return false;
+		}
+		else
+			return true;
+	}
 };
+
+
 #endif

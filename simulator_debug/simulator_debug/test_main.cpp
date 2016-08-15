@@ -1,4 +1,6 @@
 #include "agent_manager.h"
+#include "behavior_manager.h"
+#include "Worker.h"
 #include <algorithm>
 #include <windows.h>
 #include <ppl.h>
@@ -7,8 +9,29 @@
 #include <concurrent_vector.h>
 using namespace concurrency;
 using namespace std;
+
+
 string races[3] = { "black", "asian", "white" };
 string genders[2] = { "male", "female" };
+
+vector<agent*> find_woman(agent_manager *target){
+	agent_table* target_table = target->search_table_type("human");	
+	vector<agent*> result;
+	for (int i = 0; i < target_table->table.size(); i++) {
+		if (target_table->table[i].entry[1] == "female") {
+			agent * valid = &(target_table->table[i]);
+			result.push_back(valid);
+		}
+	}
+	return result;
+}
+
+void become_man(agent *target) {
+	target->entry[1] = "male";
+}
+
+
+
 
 int main() {
 	agent_manager a_manager(1);
@@ -17,22 +40,8 @@ int main() {
 	attribute race("race", 2);
 	vector<attribute> attrs = { age, gender, race };
 	a_manager.create_agent_type("human", attrs);
-	concurrent_vector<vector<string>> ent;
-	/*
-	parallel_for(int(0), 50000, [&](int i) {
-		string age_ = to_string((rand() % 100));
-		string gender_ = genders[rand() % 2];
-		string race_ = races[rand() % 3];
-		vector<string> entries = {age_,gender_,race_ };
-		ent.push_back(entries);
-	});
-	for (int i = 0; i < ent.size(); i++) {
-		a_manager.create_agent("human", ent[i]);
-	}
-	ent.clear();
-	*/
-	
-	for (int i = 0; i < 50000; i++) {
+
+	for (int i = 0; i < 50; i++) {
 		string age_ = to_string((rand() % 100));
 		string gender_ = genders[rand() % 2];
 		string race_ = races[rand() % 3];
@@ -40,8 +49,45 @@ int main() {
 		a_manager.create_agent("human", entries);
 	}
 
-
 	a_manager.print_table_type("human");
+
+	behavior_manager b_manager(1);
+	behavior b;
+	b.filter_function = find_woman;
+	b.logic_function = become_man;
+	b.start_time = 0;
+	b_manager.add_behavior(b);
+	vector<job> j_list = b_manager.create_job_list(0 , &a_manager);
+
+
+/*	vector<agent*> result = find_woman(&a_manager);
+	for (int i = 0; i < j_list.size(); i++) {
+		become_man(j_list[i].target);
+	}*/
+
+
+
+	thread_factory factory(10);
+	factory.dispatch_job(j_list);
+
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	a_manager.print_table_type("human");
+	
+
+
+	/*
+	vector<agent*> result = find_woman(&a_manager);
+	for (int i = 0; i < result.size(); i++) {
+		cout << result[i]->A_ID << " ";
+		for (int j = 0; j < (result[i]->entry).size(); j++) {
+			cout << result[i]->entry[j] << " ";
+		}
+		cout << endl;
+	}
+	*/
 
 	return 0;
 

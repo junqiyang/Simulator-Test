@@ -1,17 +1,17 @@
 #pragma once
-#include"agent.h"
+#include"agent_manager.h"
 #include<vector>
 #include<functional>
 using namespace std;
 
 struct behavior {
 	int start_time;
-	vector<agent*>  (*filter_function)();
-	void (*logic_function)();
+	vector<agent*>  (*filter_function)(agent_manager *target);
+	void (*logic_function)(agent *target);
 };
 
 struct job {
-	void (*action)();
-	agent * target;
+	void (*action)(agent *target);
+	agent* target;
 };
 
