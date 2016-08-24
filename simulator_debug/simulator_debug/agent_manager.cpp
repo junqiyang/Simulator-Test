@@ -63,7 +63,7 @@ agent* agent_manager::search_agent_ID(int a_ID) {
 	return tp_Table->search_agent(a_ID);
 }
 
-void agent_manager::create_agent(string a_type, vector<string> n_entry) {
+void agent_manager::create_agent(string a_type, vector<boost::any> n_entry) {
 	agent_table *tp_Table = search_table_type(a_type);
 	int tp_ID = tp_Table->get_ID();
 	int a_ID = master_table.generate_ID(tp_ID);
@@ -77,6 +77,8 @@ void agent_manager::delete_agent(int ID) {
 	agent * target = search_agent_ID(ID);
 	target = NULL;
 }
+
+
 
 
 void agent_manager::print_table_id(int t_id) {

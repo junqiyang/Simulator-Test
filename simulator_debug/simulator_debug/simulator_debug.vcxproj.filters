@@ -28,6 +28,18 @@
     <Filter Include="Header Files\Thread">
       <UniqueIdentifier>{0dcce612-eeb4-47a1-9cf1-9506a377e3df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\agent">
+      <UniqueIdentifier>{1fafefc2-d8a5-492e-a2c8-05457be50a03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\behavior">
+      <UniqueIdentifier>{514d9aad-7896-4e49-8274-3f62e23b877a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread">
+      <UniqueIdentifier>{52ba7449-81fb-4517-bf73-e8e6a4f3aea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test_units">
+      <UniqueIdentifier>{6ca18fd8-d61a-4d60-9464-fa22037db8cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="agent.h">
@@ -60,25 +72,28 @@
     <ClInclude Include="simulation_master.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="network.h">
+      <Filter>Header Files\agent</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="agent_table.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ID_table.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\agent</Filter>
     </ClCompile>
     <ClCompile Include="agent_manager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\agent</Filter>
     </ClCompile>
     <ClCompile Include="behavior_manager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\behavior</Filter>
     </ClCompile>
-    <ClCompile Include="test_main.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ID_table.cpp">
+      <Filter>Source Files\agent</Filter>
     </ClCompile>
     <ClCompile Include="work.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="test_main.cpp">
+      <Filter>Source Files\test_units</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

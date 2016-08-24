@@ -122,6 +122,7 @@
     <ClInclude Include="behavior_manager.h" />
     <ClInclude Include="ID_table.h" />
     <ClInclude Include="input_manager.h" />
+    <ClInclude Include="network.h" />
     <ClInclude Include="simulation_master.h" />
     <ClInclude Include="update_manager.h" />
     <ClInclude Include="Worker.h" />

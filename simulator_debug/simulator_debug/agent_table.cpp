@@ -32,14 +32,15 @@ void agent_table::delete_entry(int index) {
 }
 
 void agent_table::print_table() {
+	cout << "ID   ";
 	for (int i = 0; i < agent_attribute.size(); i++) {
-		cout << agent_attribute[i].attribute_name << " ";
+		cout << agent_attribute[i].attribute_name << "    ";
 	}
 	cout << endl;
 	for (int i = 0; i < table.size(); i++) {
-		cout << table[i].A_ID<< " ";
+		cout << table[i].A_ID<< "    ";
 		for (int j = 0; j < table[i].entry.size(); j++) {
-			cout << table[i].entry[j] << " ";
+			cout << any_cast<string>(table[i].entry[j]) << "    ";
 		}
 		cout << endl;
 	}

@@ -1,4 +1,6 @@
 #pragma once
+//threadpool resource:http://threadpool.sourceforge.net/
+//threadpool example:http://threadpool.sourceforge.net/tutorial/intro.html
 #include "behavior.h"
 #include <iostream>
 #include <sstream>

@@ -2,6 +2,7 @@
 #ifndef AGENT_TABLE_H
 #define AGENT_TABLE_H
 #include "agent.h"
+//#include "behavior.h"
 #include <vector>
 using namespace std;
 
@@ -9,10 +10,11 @@ using namespace std;
 
 class agent_table {
 private:
-	int T_ID;//table ID
+	int T_ID;//table ID, if -999 it means it is a temp table
 	string agent_type;//what agent this table hold
 	vector<attribute> agent_attribute;//define columns
-	
+	//vector<behavior*> possibe_actions;
+ 
 public:
 	vector<agent> table;//set of agents(set of rows)
 	//constructor
