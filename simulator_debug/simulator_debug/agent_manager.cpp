@@ -78,9 +78,6 @@ void agent_manager::delete_agent(int ID) {
 	target = NULL;
 }
 
-
-
-
 void agent_manager::print_table_id(int t_id) {
 	agent_table* target = search_table_ID(t_id);
 	target->print_table();

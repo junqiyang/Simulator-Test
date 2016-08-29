@@ -1,25 +1,5 @@
-﻿  work.cpp
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\work.cpp(13): warning C4018: '<': signed/unsigned mismatch
-  test_main.cpp
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\test_main.cpp(20): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\test_main.cpp(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\test_main.cpp(89): warning C4018: '<': signed/unsigned mismatch
-  behavior_manager.cpp
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\behavior_manager.cpp(18): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\behavior_manager.cpp(31): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\behavior_manager.cpp(33): warning C4018: '<': signed/unsigned mismatch
-  agent_manager.cpp
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(8): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(22): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(29): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(38): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(46): warning C4018: '<': signed/unsigned mismatch
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(56): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(51): warning C4715: 'agent_manager::search_table_ID': not all control paths return a value
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\agent_manager.cpp(43): warning C4715: 'agent_manager::search_table_type': not all control paths return a value
-c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\behavior_manager.cpp(25): warning C4715: 'behavior_manager::create_active_list': not all control paths return a value
-  Skipping... (no relevant changes detected)
-  agent_table.cpp
+﻿  network.cpp
+c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\network.cpp(14): warning C4018: '<': signed/unsigned mismatch
+c:\users\roast_000\documents\github\simulatorengine\simulator_debug\simulator_debug\network.cpp(15): warning C4018: '<': signed/unsigned mismatch
   simulator_debug.vcxproj -> C:\Users\roast_000\Documents\GitHub\SimulatorEngine\simulator_debug\Debug\simulator_debug.exe
   simulator_debug.vcxproj -> C:\Users\roast_000\Documents\GitHub\SimulatorEngine\simulator_debug\Debug\simulator_debug.pdb (Partial PDB)

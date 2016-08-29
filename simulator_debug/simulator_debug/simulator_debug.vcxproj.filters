@@ -95,5 +95,8 @@
     <ClCompile Include="test_main.cpp">
       <Filter>Source Files\test_units</Filter>
     </ClCompile>
+    <ClCompile Include="network.cpp">
+      <Filter>Source Files\agent</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -132,6 +132,7 @@
     <ClCompile Include="agent_table.cpp" />
     <ClCompile Include="behavior_manager.cpp" />
     <ClCompile Include="ID_table.cpp" />
+    <ClCompile Include="network.cpp" />
     <ClCompile Include="test_main.cpp" />
     <ClCompile Include="work.cpp" />
   </ItemGroup>
